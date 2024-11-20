@@ -28,12 +28,12 @@ public class ClientController {
         return new MyResponse<>(p.getOrderId() + "번 주문이 등록되었습니다.", result);
     }
 
-    //본인이 주문한 책 리스트
+    //본인이 주문한 책 리ㅏ스트
     @GetMapping("order")
     @Operation(summary = "책 주문 리스트")
     public MyResponse<List<OrderGetRes>> getOrderList(@ParameterObject @ModelAttribute OrderGetReq p) {
         List<OrderGetRes> list = service.getOrderList(p);
-        return new MyResponse<>(list.size() + "rows", list);
+        return new MyResponse<>(list.size() + " rows", list);
     }
 
 }
